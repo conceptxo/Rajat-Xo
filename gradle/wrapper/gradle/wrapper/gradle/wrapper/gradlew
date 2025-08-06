@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+set -e
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+JAR="$DIR/gradle/wrapper/gradle-wrapper.jar"
+URL="https://services.gradle.org/distributions/gradle-8.2.2-bin.zip"
+curl -L "$URL" -o "$DIR/gradle-8.2.2-bin.zip"
+java -jar "$JAR" "$@"
